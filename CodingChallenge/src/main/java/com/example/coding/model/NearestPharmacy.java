@@ -1,12 +1,10 @@
 package com.example.coding.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class NearestPharmacy {
 	
 	private String name;
 	
-	@JsonFormat
 	private Address address;
 	
 	private double distance;

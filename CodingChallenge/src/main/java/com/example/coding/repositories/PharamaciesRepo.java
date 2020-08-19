@@ -6,10 +6,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+
+import com.example.coding.model.Geodetails;
 import com.example.coding.model.Pharmacies;
 
 @Repository
-public interface PharamaciesRepo extends JpaRepository<Pharmacies, Long>{
+public interface PharamaciesRepo extends JpaRepository<Pharmacies, Geodetails>{
 	
 	@Query(value="SELECT PharmacyName, Address,City,State,Zipcode,"
 			+ "SQRT( POW(69.1 * (Latitude - (:lat)), 2) + "
