@@ -11,7 +11,7 @@ import com.example.coding.model.Pharmacies;
 @Repository
 public interface PharamaciesRepo extends JpaRepository<Pharmacies, Long>{
 	
-	@Query(value="SELECT PharmacyName, address,"
+	@Query(value="SELECT PharmacyName, Address,City,State,Zipcode,"
 			+ "SQRT( POW(69.1 * (Latitude - (:lat)), 2) + "
 			+ "POW(69.1 * ((:longi) - Longitude) * COS(Latitude / 57.3), 2)) "
 			+ "AS distance  FROM Pharmacies p ORDER BY distance",nativeQuery = true)

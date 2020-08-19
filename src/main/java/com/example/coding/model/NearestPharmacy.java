@@ -1,11 +1,13 @@
 package com.example.coding.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class NearestPharmacy {
 	
 	private String name;
 	
-	private String address;
+	@JsonFormat
+	private Address address;
 	
 	private double distance;
 
@@ -17,11 +19,11 @@ public class NearestPharmacy {
 		this.name = name;
 	}
 
-	public String getAddress() {
+	public Address getAddress() {
 		return address;
 	}
 
-	public void setAddress(String address) {
+	public void setAddress(Address address) {
 		this.address = address;
 	}
 

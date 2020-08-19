@@ -1,6 +1,7 @@
 package com.example.coding.model;
 
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,6 +21,8 @@ public class Pharmacies {
 	@Column(name="PharmacyName",nullable=false,length = 70)
 	private String name;
 	
+	@Embedded
+	@Column(name="Address",nullable=false,length = 70)
 	private Address address;
 	
 	@Column(name="Latitude",nullable=false)
@@ -27,6 +30,14 @@ public class Pharmacies {
 	
 	@Column(name="Longitude",nullable=false)
 	private double longitude;
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 
 	public long getPid() {
 		return pid;
