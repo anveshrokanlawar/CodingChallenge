@@ -1,6 +1,6 @@
 # Coding Challenge
 
-Steps to be followed before running the project
+Steps to be followed before runnthe project
 
 1. Create a database in mysql with name pharmacydb 
 
